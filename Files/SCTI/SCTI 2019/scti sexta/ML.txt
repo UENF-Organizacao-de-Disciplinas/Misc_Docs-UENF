@@ -1,0 +1,41 @@
+machine learning: reinforced learning, supervised, unsupervised
+supervisionado: reconhecimento de padrões
+clustering: dividir em grupos por coisas em comum
+
+ECA
+
+machine learning: reinforced learning, classical learning, ensemble methods, neural nets and deep learning.
+
+https://vas3k.com/blog/machine_learning/?fbclid=IwAR0NjjOJlZt4-KiaBGi11DskcBHAa2d6xaUchkPZdDch7pxS5sbcrZkUBJA
+
+--
+
+jupyter
+numpy
+sckits* learn_ machine learning in python
+tensor flow
+keras _ a deep learning library
+colab
+pandas (manipulação dos dados)
+matplotlib (gerar gráficos)
+keggle
+
+
+matemática para Machine Learning:
+Linear algebra
+probability theory
+multivariate calculus
+algorith and complexity
+
+https://drive.google.com/drive/folders/1WSP3jQrkpr_oFYHmlqbZ3uUbEuCOgDZ9
+
+pesquisar sobre a função reshape (1,1) no python
+
+jpseixasesilva@hotmail.com
+João Paulo Seixas
+
+
+
+
+
+

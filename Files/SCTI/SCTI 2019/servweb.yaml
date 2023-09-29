@@ -1,0 +1,29 @@
+---
+- hosts: servweb
+  remote_user: root
+  tasks:
+
+  - name: Instalando pacotes
+    apt:
+      update_cache: yes
+      state: present
+      pkg:
+      - apache2
+      - php
+      - mariadb-server
+      - php-mysql
+      - git
+  - name:  apagando arquivo /var/www/html/index.html
+    file:
+      path: /var/www/html/index.html
+      state: absent
+  - name: clonando repositorio
+    git:
+      repo: 'https://github.com/viniciusx7/aulaweb.git'
+      dest: /var/www/html/
+  - name: iniciando MariaDB-server
+    service:
+      name: mysql
+      state: started
+  - name: criando banco de dados e tabela
+    shell: mysql -u root < /var/www/html/banco.sql

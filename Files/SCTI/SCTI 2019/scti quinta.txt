@@ -1,0 +1,31 @@
+mqtt
+mqtt-broker - servidor
+
+publish
+subscribe
+topico
+
+docker
+
+aws - amazon
+google cloud - google
+?? - microsoft
+?? - ibm
+
+
+voker mosquitto
+
+linux
+
+estudar diferentes áreas
+
+mqtt dash - app - cliente
+
+o cliente aponta para o broker.
+
+node.js
+python
+java
+go
+
+
