@@ -1,0 +1,74 @@
+﻿Nota,Name,Status,Período Esperado,Ano feito,Categoria,Tempo Computado,Código,HT[eóricas],HP[ráticas],HE[xtra classe],H total,CR
+, Estágio Supervisionado ,Not started,10,2023.2,Obrigatória,0,INF01127,0,0,204,204,3
+, Monografia ,Not started,10,2023.2,Obrigatória,0,INF01131,0,0,136,136,2
+,,In progress,7,2023.1,Eletiva Optativa,0,INF01220,34,34,0,68,3
+,IA 2,In progress,8,"2022.2, Verão",Eletiva Optativa,0,,68,,,68,
+," Metodologia Científica para
+  Engenharia de Produção ",In progress,7,2023.1,Obrigatória,0,PRO01122,68,0,0,68,4
+, Interface Homem-Máquina,In progress,7,2023.1,Obrigatória,0,INF01123,68,0,0,68,4
+, Projeto de Monografia ,In progress,9,2023.1,Obrigatória,0,INF01130,0,0,136,136,2
+, Teste de Software ,In progress,7,2023.1,Obrigatória,0,INF01121,34,34,0,68,3
+8.6,Tópicos Especiais em Inteligência Artificial II - Sistemas Inteligentes,Done,8,"2022.2, Verão",Eletiva Optativa,68,INF01133,34,34,0,68,3
+10," Paradigma Orientado a Objetos para
+  Desenvolvimento de Software ",Done,6,"2022.2, Verão",Obrigatória,68,INF01210,68,0,0,68,4
+9,Energia e Meio Ambiente,Done,0,"2020.2, COVID",Eletiva Livre,0,LMT01310,34,0,0,34,2
+7.9,T.e.Economia: Introdução à Economia,Done,0,"2021.1, COVID",Eletiva Livre,0,LGP14012,68,0,0,68,4
+9.5,Sociologia,Done,0,"2020.2, COVID",Eletiva Livre,0,,68,0,0,68,4
+8.5,Teoria Geral da Administração,Done,0,"2021.1, COVID",Eletiva Livre,0,LGP04001,68,0,0,68,4
+8.2,Tópicos Especiais em Sistemas Operacionais,Done,8,"2020.2, COVID",Eletiva Optativa,51,INF01240,17,34,,51,2
+10,"Tópicos Especiais em Computação II: Programação de Aplicações de
+Microcontrolador Digital",Done,7,"2020.2, COVID",Eletiva Optativa,68,,34,34,,68,
+8,Tóp. Especiais em Filosofia - Teoria da DecisãoLCL14006,Done,0,2022.2,Eletiva Livre,0,LCL14006,68,0,0,68,4
+8.4,Tópicos Especiais em Simulação Computacional II:Heurísticas e Complexidade,Done,8,2022.2,Eletiva Optativa,68,,68,,,68,
+10,Português Instrumental I,Done,0,"2020.2, COVID",Eletiva Livre,0,LEL04101,0,68,0,68,2
+6.3, Física Geral I ,Done,2,2019.2,Obrigatória,68,FIS01202,68,0,0,68,4
+9.5, Banco de Dados II ,Done,6,2022.2,Obrigatória,68,INF01206,68,0,0,68,4
+7.8, Análise e Projeto de Sistemas ,Done,4,2022.1,Obrigatória,68,INF01201,68,0,0,68,4
+9.7, Arquitetura de Computadores ,Done,3,"2020.2, COVID",Obrigatória,68,INF01112,68,0,0,68,4
+9," Linguagens Formais e Teoria da
+  Computação ",Done,5,2022.1,Obrigatória,68,INF01117,68,0,0,68,4
+8.9, Sistema Operacional ,Done,4,"2021.1, COVID",Obrigatória,68,INF01204,68,0,0,68,4
+9.3, Estatística e Probabilidades ,Done,4,"2021.1, COVID",Obrigatória,68,MAT01201,68,0,0,68,4
+7," Laboratório de Física Geral
+  II ",Done,3,"2021.1, COVID",Obrigatória,34,FIS01109,0,34,0,34,1
+, Computação e Sociedade ,Done,5,"2020.2, COVID",Obrigatória,34,LES04536,34,0,0,34,2
+7, Processos Estocásticos ,Done,5,2022.1,Obrigatória,68,MAT01107,68,0,0,68,4
+8.6, Programação II ,Done,2,2019.2,Obrigatória,68,INF01209,34,34,0,68,3
+9.1, Redes de Computadores ,Done,5,2022.1,Obrigatória,68,INF01115,68,0,0,68,4
+, Cálculo Numérico ,Done,4,"2020.2, COVID",Obrigatória,68,MAT01208,68,0,0,68,4
+8.8, Estruturas de Dados I ,Done,3,"2020.2, COVID",Obrigatória,68,INF01114,34,34,0,68,3
+10, Lógica Digital ,Done,2,2019.2,Obrigatória,68,INF01104,34,34,0,68,3
+9.4, Banco de Dados I ,Done,5,2022.1,Obrigatória,68,INF01116,68,0,0,68,4
+9.8," Introdução à Computação
+  Gráfica ",Done,6,"2022.2, Verão",Obrigatória,68,INF01124,68,0,0,68,4
+8.7, Sistemas Distribuídos ,Done,7,2022.2,Obrigatória,68,INF01122,68,0,0,68,4
+8.7, Física Geral II ,Done,3,"2020.2, COVID",Obrigatória,68,FIS01103,68,0,0,68,4
+, Inglês Instrumental II ,Done,2,"2020.2, COVID",Obrigatória,68,LEL04206,0,68,0,68,2
+7.7, Estruturas Discretas ,Done,2,2019.2,Obrigatória,68,INF01207,68,0,0,68,4
+6.4," Cálculo Diferencial e Integral
+  II ",Done,2,2019.2,Obrigatória,85,MAT01203,85,0,0,85,5
+8.4, Algebra Linear ,Done,2,2019.2,Obrigatória,68,MAT01212,68,0,0,68,4
+," Cálculo Diferencial e Integral
+  III ",Done,3,"2020.2, COVID",Obrigatória,68,MAT01105,68,0,0,68,4
+7.8, Laboratório de Física Geral I ,Done,2,2019.2,Obrigatória,34,FIS01204,0,34,0,34,1
+9, Estrutura de Dados II ,Done,4,"2021.1, COVID",Obrigatória,68,INF01202,34,34,0,68,3
+8," Programação Orientada a
+  Objetos ",Done,4,"2021.1, COVID",Obrigatória,68,INF01203,34,34,0,68,3
+, Métodos Matemáticos ,Done,3,"2020.2, COVID",Obrigatória,68,MAT01106,68,0,0,68,4
+9.1," Introdução à Ciência da
+  Computação ",Done,1,2019.1,Obrigatória,34,INF01101,34,0,0,34,2
+6.7, Engenharia de Software ,Done,5,2022.1,Obrigatória,68,INF01119,68,0,0,68,4
+7.7, Pesquisa Operacional ,Done,6,"2021.1, COVID",Obrigatória,68,INF01211,68,0,0,68,4
+7.3," Paradigmas de Linguagens de
+  Programação ",Done,3,"2020.2, COVID",Obrigatória,68,INF01113,68,0,0,68,4
+9.8, Programação I ,Done,1,2019.1,Obrigatória,68,INF01106,34,34,0,68,3
+9.5, Empreendedorismo ,Done,8,2022.1,Obrigatória,34,PRO01540,34,0,0,34,2
+10, Lógica Matemática ,Done,1,2019.1,Obrigatória,68,MAT01104,34,34,0,68,3
+8.8, Inteligência Artificial ,Done,6,2022.2,Obrigatória,68,INF01205,68,0,0,68,4
+9.8, Compiladores ,Done,6,2022.2,Obrigatória,68,INF01212,68,0,0,68,4
+9, Organização de Computadores ,Done,1,2019.1,Obrigatória,68,INF01105,68,0,0,68,4
+8, Geometria Analítica e Vetores ,Done,1,2019.1,Obrigatória,68,MAT01117,68,0,0,68,4
+9.9, Inglês Instrumental I ,Done,1,2019.2,Obrigatória,68,LEL04102,0,68,0,68,2
+9.8, Cálculo Diferencial e Integral I ,Done,1,2019.1,Obrigatória,102,MAT01101,102,0,0,102,6
+3.4," Paradigma Orientado a Objetos para
+  Desenvolvimento de Software ",Reprovada,6,2022.2,Obrigatória,0,INF01210,68,0,0,68,4
