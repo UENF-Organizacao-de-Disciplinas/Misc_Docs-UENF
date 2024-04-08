@@ -1,0 +1,33 @@
+Linguagens Formais - 2022/1 - INF01117
+Profa. Dra. Annabell D.R. Tamariz
+March 21, 2022
+
+Lista de Exercícios - 1     ∅ϵ
+
+1. Um alfabeto é um conjunto finito de símbolos ou caracteres.
+Considere L1 = {a, b}
+e L2 = {ϵ, a, c}. Responda:
+    •σ pode ser considerado um alfabeto?
+    •ϵ pertence a todos os alfabetos?
+    •L2 pode ser considerado um alfabeto?
+    •Existe diferença entre um alfabeto e um elemento de L2;
+    •Seja Σ = L2. Determine Σ+.
+    •Seja Σ = L2. ϵ é uma palavra a partir de Σ? ϵ é um prefixo sobre a palavra aabb?
+
+2. Dado Σ = {a, b} construa autômatos finitos determinísticos para as seguintes linguagens:
+    (a) L3 = {a((ba)^n)b}
+    (b) L4 = {a(b^n)ab}
+    (c) L5 = σ
+    (d) L6 = ϵ
+
+3. Considere o AFN descrito na Figura 1:
+    • Mostre uma sequência de estados para que w = 1011 seja aceita;
+    • Discuta as possibilidades de w = 1011;
+    • Posso afirmar que a linguagem aceita pelo AFN acimaé L7 = { w | w tem 101 como subpalavra}?
+
+4. Dado Σ = {a, b} escreva um AFN cujas palavras aceitas pertençam a L L= { w | w ∈ Σ^∗ e o antepenúltimo símbolo de w é b}.
+
+*FIGURAS*
+
+5. Qualifique o autômato na Figura 2 e descreva a linguagem gerada por ele. 
+Bom trabalho a tod@s, dúvidas na aula presencial.

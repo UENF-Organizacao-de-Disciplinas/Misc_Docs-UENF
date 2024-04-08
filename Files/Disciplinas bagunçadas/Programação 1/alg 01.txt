@@ -1,0 +1,62 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 15/04/2021
+
+tipo
+   data= registro
+      dia:inteiro
+      mes: inteiro
+      ano: inteiro
+   fimregistro
+   registro_conta= registro
+      nome: caractere
+      cpf: caractere
+      rg: caractere
+      numero_conta: inteiro
+      data_abertura: data
+      saldo: real
+   fimregistro
+
+
+
+
+
+procedimento inciarvetor (var x: vr)
+var y: inteiro
+
+inicio
+   para y <-1 ate 15 faca
+      escreva("digite o nome do",y,"cliente:")
+      leia(x[y].nome)
+      escreva("digite o cpf do",y,"cliente:")
+      leia(x[y].cpf)
+      escreva("digite o numero da conta do",y,"cliente")
+      leia(x[y].numero_conta)
+      escreva("digite o saldo do",y,"cliente")
+      leia(x[y].saldo)
+      escreva("digite a data de abertura da conta do",y,"cliente:")
+      leia(x[y].data_abertura.dia)
+      leia(x[y].data_abertura.mes)
+      leia(x[y].data_abertura.ano)
+
+
+   fimpara
+fimprocedimento
+
+
+
+
+Var
+   // Seção de Declarações das variáveis
+    vr: vetor[1..15] de registro_conta
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+    iniciarvetor(vr)
+
+
+
+
+Fimalgoritmo

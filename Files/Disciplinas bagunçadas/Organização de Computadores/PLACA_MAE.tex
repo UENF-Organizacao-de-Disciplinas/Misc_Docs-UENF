@@ -1,0 +1,84 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancybox}
+\pagestyle{plain}
+
+\begin{document}
+
+Grupo: Daniel Brito, João Vítor F. Dias, João Bosco
+
+A Placa mãe
+
+Um computador pode ser esquematizado pelos seguintes componentes principais:
+
+1. Processador: Realiza operações de aritmética, leitura e alocação de dados.
+
+2. Memória: Detém os registros que permitem que dados sejam lidos, guardados, substituídos e apagados. Sendo, deste modo, essencial ao funcionamento do processador.a
+
+3. Portas de entrada e Saída: São conectores que fazem a interface tanto da comunicação homem-máquina (Ex.: teclado e monitor), quanto possíveis componentes extras como WebCams e Escâneres.
+
+Quando surgem as placas de circuito impresso (PCB) cada um desses componentes é soldado a uma placa que por sua vez é encaixada ao lado das outras em uma PCB que as conecta por meio de "Data Buses" impressos. O que representou um grande avanço em relação a situação anterior de conectar componentes individualmente por fios que demandavam maior espaço e complexidade de ligação.
+
+Entretanto, esta estrutura que podemos chamar de embrião da placa-mãe tratava-se apenas de conexões, de modo que cada componente era uma placa separada, o que ainda ocupava muito espaço e limitava as possibilidades por causa da complexidade de suas conexões.
+
+Tudo mudou nos anos 1970 quando são lançadas ao grande público os primeiros computadores pessoais realmente compactos e contidos em uma única placa-mãe.
+
+As primeiras placas:
+
+Podemos destacar três placas-mãe que definiram o futuro da computação: Apple I, Apple II e IBM PC 5150
+
+Apple I
+
+Steve Wozniac trabalhava há anos em seu próprio computador chegando a entrar em um clube de entusiastas onde conheceu Steve Jobs. Este o convenceu a venderem aquela invenção: uma única placa pré-montada com memórias, processador, entrada para teclado e uma novidade: saída para TV CRT em uma época onde computadores eram exclusivamente para "hackers", cientistas e algumas empresas específicas. Então em 1975 a Apple Computers coloca o primeiro pavimento em de sua história que se entrelaça com a própria história da computação.
+
+O Apple I tinha em torno de 60 chips, basicamente funcionando da seguinte forma:
+
+Apple II
+
+Com o sucesso inesperado de sua estreia a Apple lança o que viria a de fato revolucionar completamente ojogo. O Apple II é absolutamente um dos computadores mais importantes da história.
+
+IBM PC 5150
+
+O IBM PC 5150, diferente de todos os outros IBMs foi feito com peças e software terceirizado, única maneira de entregar o produto no prazo mas se mostrou um sucesso que redefiniu a indústria. Estabeleceu padrões seguidos até hoje como o formato ATX, processador Intel com software da Windows, arquitetura x86, compatibilidade retroativa. Além do próprio avanço técnico que ele representou quando comparamos seus 9Kg custando 1.565 dólares com seu antecessor de 25Kg e 20.000.
+
+Componentes e arquitetura de uma placa mãe moderna
+
+Atualmente a placa-mãe tem os seguintes componentes:
+
+"Form Factor": apesar de não ser um componente e sim o tamanho e a disposição geral dos mesmos, é uma das principais características de uma placa. Os principais são AT e ATX, mas existem outros.
+
+CPU: unidade central de processamento é o cérebro do computador, ele quem executa operações aritméticas, lógicas e manipulação de dados. Geralmente cada família de processadores requer um socket específico, que portanto define uma placa mãe.
+
+Frequência de barramento, ou Clock: Largura de
+
+banda em que operam os barramentos. Dependendo da frequência do clock um processador poderá funcionar ou não. Geralmente novos chipsets são desenvolvidos para trabalhar com novas gerações de processadores.
+
+Chipset: controla o fluxo de dados da placa-mãe. De modo que cada processador requer um chipset específico. Ele é dividido em duas partes, que são nomeadas como North Bridge e South Bridge.
+
+esponsável pela comunicação entre memória (FSB , e vídeo (AGP e PCIe).
+
+controla PCI e interfaces I/O (Portas seriais e paralelas e USB) e controladores (Discos [IDE SATA], som, rede).
+
+Memórias: principalmente divididas entre:
+
+ROM (Read Only Memory), a memória permanente gravada em um HD ou SSD. RAM (Random Access Memory), memória volátil onde ficam os dados dos programas enquanto eles "rodam".
+
+BIOS (Basic Input Output System): um software gravado em um chip com memória flash e CMOS que funciona quando o processador é ligado inicializando a placa-mãe, checando os dispositivos, carregando o setup eo Sistema Operacional.
+
+CMOS: é uma memória volátil mas enquanto recebe carga da bateria armazena as configurações do SETUP. Essa mesma bateria alimenta o relógio.
+
+Slots de expansão: Slots de expansão são conectores ligados a barramentos que acomodam as placas.
+
+
+Os slots ISA foram usados por muito tempo, mas hoje já são obsoletos. O próximo passo foi o PCI, usado por placas de rede, placas de som, modens PCI. Em seguida veio a AGP (Accelerated Graphics Port) usado por placas de vídeo. Entretanto atualmente a tendência é serem todas substituídas pela PCI Express pois oferecem mais recursos e possibilidades, dentre eles o de usar uma ou mais conexões seriais, isto é "caminhos" também chamados de "lanes" para transferência de dados. Geralmente a diferença entre esses slots são a largura, a frequência eo tamanho.
+
+Portas I/O: São as portas seriais e paralelas do computador utilizadas para ligação de modems, impressoras, scanners e outros dispositivos removíveis. A sua disposição física é definida pela especificação da forma da placa-mãe.
+
+
+
+\end{document}

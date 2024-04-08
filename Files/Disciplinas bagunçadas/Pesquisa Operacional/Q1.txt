@@ -1,0 +1,320 @@
+PROBLEMA:
+  MAX L = 7X + 3Y + 3Z
+          5X + 2Y + 3Z <= 19
+          2X + 1Y + 2Z <=  8
+           X,   Y,   Z >=  0
+
+PROBLEMA MODIFICADO:
+  MAX L
+  (7)*X + (3)*Y + (3)*Z  =  L
+  (5)*X + (2)*Y + (3)*Z <= 19
+  (2)*X + (1)*Y + (2)*Z <=  8
+
+PRIMEIRA REPETIÇÃO
+
+  Passo 1 - Cálculo da solução inicial.
+
+    i. Colocar o problema na forma canônica.
+    
+      Acrescentar variáveis de folga.
+        MAX L
+        (7)*X + (3)*Y + (3)*Z                =  L
+        (5)*X + (2)*Y + (3)*Z + (1)*f1       = 19
+        (2)*X + (1)*Y + (2)*Z      + (1)*f2  =  8
+
+      Utilizar as variáveis de folga como variáveis básicas.
+        MAX L
+        L =          (7)*X + (3)*Y + (3)*Z
+        f1 = (19) - ((5)*X + (2)*Y + (3)*Z)
+        f2 = ( 8) - ((2)*X + (1)*Y + (2)*Z)
+
+        MAX L
+        L  =      7X + 3Y + 3Z
+        f1 = (19) + (-5)*X + (-2)*Y + (-3)*Z
+        f2 = ( 8) + (-2)*X + (-1)*Y + (-2)*Z
+      
+      SOLUÇÕES INICIAIS
+        SOLUÇÃO INICIAL :   (X, Y, Z, f1, f2) = (0, 0, 0, 19, 8)
+        VALOR DA SOLUÇÃO:   L = 7*X + 3*Y + 3*Z = 7*0+3*0+3*0 = 0
+        VALOR DA SOLUÇÃO:   L = 0
+
+  Passo 2.- Verificar a condição de otimalidade.
+    Existe alguma variável não-básica que melhora a função objetivo?
+      MAX L
+      L  =        ( 7)*X + ( 3)*Y + ( 3)*Z
+      f1 = (19) + (-5)*X + (-2)*Y + (-3)*Z
+      f2 = ( 8) + (-2)*X + (-1)*Y + (-2)*Z
+
+      SIM, X, Y e Z
+
+    i. Caso exista, escolher a variável não-básica que produz maior melhoria, para se tornar básica (entrar na base).
+      Ir ao Passo 3.
+
+      L  =        ( 7)*X + ( 3)*Y + ( 3)*Z
+      ESCOLHE-SE O X, POIS TEM MAIOR COEFICIENTE
+
+    ii. Caso contrário, PARAR. A solução corrente é ótima.
+
+  Passo 3.- Verificar o caso ilimitado e a condição de viabilidade.
+    O aumento da variável não-básica escolhida, tem limite?
+      MAX L
+      L  =      7X + 3Y + 3Z
+      f1 = 19 - 5X - 2Y - 3Z
+      f2 =  8 - 2X - 1Y - 2Z
+      Como X foi escolhido, se zerarmos todas as outras variáveis...
+      0  = 19 - 5X
+      0  =  8 - 2X
+
+      5X = 19
+      2X =  8
+      
+      SIM, o aumento da variável não-básica escolhida tem limite.
+
+    i. Caso tenha, identificar a variável básica que se torna zero primeiro (sai da base), mantendo a viabilidade.
+      Ir ao Passo 4.
+        5X = 19      - 2Y - 3Z - f1
+        2X =  8      - 1Y - 2Z - f2
+
+        5X = 19
+        2X =  8
+
+        X = 19/5
+        X =  8/2
+        
+        X = 3,8
+        X = 4
+
+        A VARIÁVEL QUE SE TORNA ZERO PRIMEIRO SE ENCONTRA NA RESTRIÇÃO 1
+
+
+    ii. Caso contrário, PARAR. A solução é ilimitada.
+
+  Passo 4.- Calculo da nova solução.
+    Reescrever o sistema de equações, expressando as variáveis básicas em função das variáveis não-básicas.
+      MAX L
+      L  =        ( 7)*X + ( 3)*Y + ( 3)*Z
+      f1 = (19) + (-5)*X + (-2)*Y + (-3)*Z
+      f2 = ( 8) + (-2)*X + (-1)*Y + (-2)*Z
+
+      MAX L     
+      L   =        ( 7)*X + ( 3)*Y + ( 3)*Z           
+      5*X = (19)          + (-2)*Y + (-3)*Z + (-1)*f1 
+      f2  = ( 8) + (-2)*X + (-1)*Y + (-2)*Z           
+
+      MAX L     
+      L  =         ( 7)*X + ( 3)*Y + ( 3)*Z              
+      X  = ((19)          + (-2)*Y + (-3)*Z + (-1)*f1)/5 
+      f2 =  ( 8) + (-2)*X + (-1)*Y + (-2)*Z              
+
+      MAX L     
+      L  =            ( 7)*X + (   3)*Y + (   3)*Z              
+      X  =  (19/5)           + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 =  (   8)  + (-2)*X + (-  1)*Y + (-  2)*Z              
+
+      MAX L     
+      L  =     ( 7)*((19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1) + ( 3)*Y + ( 3)*Z
+      X  =           (19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 = (8) (-2)*((19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1) + (-1)*Y + (-2)*Z
+
+      MAX L     
+      L  = (7*19/5)               + (-   7*2/5)*Y + (-   7*3/5)*Z + (-   7*1/5)*f1 + ( 3)*Y + ( 3)*Z
+      X  = (  19/5)               + (-     2/5)*Y + (-     3/5)*Z + (-     1/5)*f1
+      f2 = (     8) + ((-2)*19/5) + ((-2)*-2/5)*Y + ((-2)*-3/5)*Z + ((-2)*-1/5)*f1 + (-1)*Y + (-2)*Z
+
+      MAX L     
+      L  = (133/5)           + (-14/5)*Y + (-21/5)*Z + (-7/5)*f1 + ( 3)*Y + ( 3)*Z
+      X  = ( 19/5)           + (- 2/5)*Y + (- 3/5)*Z + (-1/5)*f1
+      f2 = (    8) + (-38/5) + (  4/5)*Y + (  6/5)*Z + ( 2/5)*f1 + (-1)*Y + (-2)*Z
+
+      MAX L     
+      L  = (133/5)           + (-14/5)*Y + (   3)*Y + (-21/5)*Z + ( 3)*Z   + (-7/5)*f1
+      X  = ( 19/5)           + (- 2/5)*Y            + (- 3/5)*Z            + (-1/5)*f1
+      f2 = (    8) + (-38/5) + (  4/5)*Y + (-  1)*Y + (  6/5)*Z + (-2)*Z   + ( 2/5)*f1
+
+      MAX L     
+      L  = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X  = ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 = (  2/5) + (-1/5)*Y + (-4/5)*Z + ( 2/5)*f1
+
+    Obter a nova solução zerando as variáveis não-básicas.
+      MAX L     
+      L  = 133/5 + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X  =  19/5 + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 =   2/5 + (-1/5)*Y + (-4/5)*Z + ( 2/5)*f1
+      
+      MAX L     
+      L  = 133/5 + ( 1/5)*0 + (-6/5)*0 + (-7/5)*0
+      X  =  19/5 + (-2/5)*0 + (-3/5)*0 + (-1/5)*0
+      f2 =   2/5 + (-1/5)*0 + (-4/5)*0 + ( 2/5)*0
+      
+      MAX L     
+      L  = 133/5 = 26,6
+      X  =  19/5 = 3,8
+      f2 =   2/5 = 0,4
+
+    SOLUÇÕES ATUAIS:
+      SOLUÇÃO ATUAL   :   (X, Y, Z, f1, f2) = (3.8, 0, 0, 0, 0.4)
+      VALOR DA SOLUÇÃO:   L = 26,6
+    
+    Ir ao Passo 2.
+
+SEGUNDA REPETIÇÃO
+
+  Passo 2.- Verificar a condição de otimalidade.
+    Existe alguma variável não-básica que melhora a função objetivo?
+      MAX L     
+      L  = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X  = ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 = (  2/5) + (-1/5)*Y + (-4/5)*Z + ( 2/5)*f1
+
+      SIM, Y
+
+    i. Caso exista, escolher a variável não-básica que produz maior melhoria, para se tornar básica (entrar na base).
+      Ir ao Passo 3.
+
+      L  = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      ESCOLHE-SE O Y, POIS TEM MAIOR COEFICIENTE
+
+    ii. Caso contrário, PARAR. A solução corrente é ótima.
+
+  Passo 3.- Verificar o caso ilimitado e a condição de viabilidade.
+    O aumento da variável não-básica escolhida, tem limite?
+      MAX L     
+      L  = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X  = ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 = (  2/5) + (-1/5)*Y + (-4/5)*Z + ( 2/5)*f1
+      Como Y foi escolhido, se zerarmos todas as outras variáveis...
+      0 = ( 19/5) + (-2/5)*Y + (-3/5)*0 + (-1/5)*0
+      0 = (  2/5) + (-1/5)*Y + (-4/5)*0 + ( 2/5)*0
+
+      0 = ( 19/5) + (-2/5)*Y
+      0 = (  2/5) + (-1/5)*Y
+
+      (2/5)*Y = ( 19/5)
+      (1/5)*Y = (  2/5)
+      
+      SIM, o aumento da variável não-básica escolhida tem limite.
+
+    i. Caso tenha, identificar a variável básica que se torna zero primeiro (sai da base), mantendo a viabilidade.
+      Ir ao Passo 4.
+
+        (2/5)*Y = ( 19/5)
+        (1/5)*Y = (  2/5)
+
+        (2)*Y = ( 19)
+        (1)*Y = (  2)
+
+        Y = ( 19)/(2)
+        Y = (  2)/(1)
+
+        Y = ( 19/2)
+        Y = (  2/1)
+
+        Y = ( 9.5)
+        Y = (   2)
+
+        A VARIÁVEL QUE SE TORNA ZERO PRIMEIRO SE ENCONTRA NA RESTRIÇÃO 2
+
+    ii. Caso contrário, PARAR. A solução é ilimitada.
+
+  Passo 4.- Calculo da nova solução.
+    Reescrever o sistema de equações, expressando as variáveis básicas em função das variáveis não-básicas.
+
+      MAX L     
+      L  = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X  = ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      f2 = (  2/5) + (-1/5)*Y + (-4/5)*Z + ( 2/5)*f1
+
+      MAX L     
+      L       = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X       = ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      (1/5)*Y = (  2/5)            + (-4/5)*Z + ( 2/5)*f1 + (-1)*f2
+
+      MAX L     
+      L =  (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X =  ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      Y = ((  2/5)            + (-4/5)*Z + ( 2/5)*f1 + (-1)*f2)/(1/5)
+
+      MAX L     
+      L =  (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X =  ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      Y = ((  2/5)            + (-4/5)*Z + ( 2/5)*f1 + (-1)*f2)*(5)
+
+      MAX L     
+      L = (133/5)     + ( 1/5)*Y +     (-6/5)*Z +     (-7/5)*f1
+      X = ( 19/5)     + (-2/5)*Y +     (-3/5)*Z +     (-1/5)*f1
+      Y = (5)*(  2/5)            + (5)*(-4/5)*Z + (5)*( 2/5)*f1 + (5)*(-1)*f2
+
+      MAX L     
+      L = (133/5) + ( 1/5)*Y + (-6/5)*Z + (-7/5)*f1
+      X = ( 19/5) + (-2/5)*Y + (-3/5)*Z + (-1/5)*f1
+      Y = (    2)            + (-  4)*Z + (   2)*f1 + (-5)*f2
+
+      MAX L     
+      L = (133/5) + ( 1/5)*((    2) + (-  4)*Z + (   2)*f1 + (-5)*f2) + (-6/5)*Z + (-7/5)*f1
+      X = ( 19/5) + (-2/5)*((    2) + (-  4)*Z + (   2)*f1 + (-5)*f2) + (-3/5)*Z + (-1/5)*f1
+      Y = (    2)            + (-  4)*Z + (   2)*f1 + (-5)*f2
+      
+
+      MAX L     
+      L = (133/5) + ( 2/5) + (-4/5)*Z + ( 2/5)*f1 + (-5/5)*f2 + (-6/5)*Z + (-7/5)*f1
+      X = ( 19/5) + (-2/5) + ( 8/5)*Z + ( 4/5)*f1 + ( 5/5)*f2 + (-3/5)*Z + (-1/5)*f1
+      Y = (    2)          + (-  4)*Z + (   2)*f1 + (-  5)*f2
+
+      MAX L     
+      L = ((133 + 2)/5) + ((-4-6)/5)*Z + ((2-7)/5)*f1 + (-5/5)*f2
+      X = (( 19 - 2)/5) + (( 8-3)/5)*Z + ((4-1)/5)*f1 + ( 5/5)*f2
+      Y = (    2)       + (-      4)*Z + (      2)*f1 + (-  5)*f2
+
+      MAX L     
+      L = (135/5) + (-10/5)*Z + (-5/5)*f1 + (-5/5)*f2
+      X = ( 17/5) + (  5/5)*Z + ( 3/5)*f1 + ( 5/5)*f2
+      Y = (    2) + (-   4)*Z + (   2)*f1 + (-  5)*f2
+
+      MAX L     
+      L = (   27) + (-  2)*Z + (-  1)*f1 + (-1)*f2
+      X = ( 17/5) + (   1)*Z + ( 3/5)*f1 + ( 1)*f2
+      Y = (    2) + (-  4)*Z + (   2)*f1 + (-5)*f2
+
+    Obter a nova solução zerando as variáveis não-básicas.
+
+      MAX L     
+      L = (   27) + (-  2)*Z + (-  1)*f1 + (-1)*f2
+      X = ( 17/5) + (   1)*Z + ( 3/5)*f1 + ( 1)*f2
+      Y = (    2) + (-  4)*Z + (   2)*f1 + (-5)*f2
+
+      MAX L     
+      L = (   27) + (-  2)*0 + (-  1)*0 + (-1)*0
+      X = ( 17/5) + (   1)*0 + ( 3/5)*0 + ( 1)*0
+      Y = (    2) + (-  4)*0 + (   2)*0 + (-5)*0
+
+      MAX L     
+      L =    27
+      X =  17/5 = 3,4
+      Y =     2
+
+    SOLUÇÕES ATUAIS:
+      SOLUÇÃO ATUAL   :   (X, Y, Z, f1, f2) = (3.4, 2, 0, 0, 0)
+      VALOR DA SOLUÇÃO:   L = 27
+    
+    Ir ao Passo 2.
+
+TERCEIRA REPETIÇÃO
+      
+  Passo 2.- Verificar a condição de otimalidade.
+    Existe alguma variável não-básica que melhora a função objetivo?
+      MAX L     
+      L = (   27) + (-  2)*Z + (-  1)*f1 + (-1)*f2
+      X = ( 17/5) + (   1)*Z + ( 3/5)*f1 + ( 1)*f2
+      Y = (    2) + (-  4)*Z + (   2)*f1 + (-5)*f2
+
+      NÃO
+
+    i. Caso exista, escolher a variável não-básica que produz maior melhoria, para se tornar básica (entrar na base).
+      Ir ao Passo 3.
+
+    ii. Caso contrário, PARAR. A solução corrente é ótima.
+
+SOLUÇÃO ÓTIMA ENCONTRADA:
+  SOLUÇÃO ATUAL   :   (X, Y, Z, f1, f2) = (3.4, 2, 0, 0, 0)
+  VALOR DA SOLUÇÃO:   L = 27
